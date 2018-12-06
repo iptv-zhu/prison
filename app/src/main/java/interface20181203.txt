@@ -1,0 +1,223 @@
+*******************获取命令
+----------------------------------------------------------------------
+http://106.12.200.32:8080/prison/box/userLoginAction_getCommand.action?mac=testcode
+AjaxResponse<List<Command>>
+
+----------------------------------------------------------------------
+获取首页主页广告文件（接口）
+mac   (必填)
+http://106.12.200.32:8080/prison/box/adDetailAction_getAllAdDetail.action?mac=testcode-------****************************
+返回：AjaxResponse<List<AdDetail>>
+
+----------------------------------------------------------------------
+获取律师信息
+mac   (必填)
+http://106.12.200.32:8080/prison/box/getIntroAction_doGetMessage.action?category=1&mac=testcode
+ AjaxResponse<List<Lawyer>>
+ 
+----------------------------------------------------------------------
+直播
+mac   (必填)
+http://106.12.200.32:8080/prison/box/userLoginAction_getUserProductInfo.action?mac=testcode-------****************************
+product
+----------------------------------------------------------------------
+消息
+mac  (必填)
+http://106.12.200.32:8080/prison/box/getMessageAction_doGetMessage.action?mac=testcode-------****************************
+
+----------------------------------------------------------------------
+更新城市接口
+mac   (必填)
+http://106.12.200.32:8080/prison/box/userLoginAction_updateCity.action?mac=testcode-------****************************
+
+----------------------------------------------------------------------
+*************获取设备简介
+mac   (必填)
+http://106.12.200.32:8080/prison/box/getFuyuan_doGetMessage.action?mac=testcode
+
+----------------------------------------------------------------------
+获取商品所有信息
+mac  终端id   必填
+
+http://106.12.200.32:8080/prison/box/getDish_getDish.action?mac=testcode
+
+返回  List<Dish>
+
+----------------------------------------------------------------------
+获取音量控制大小
+
+mac 
+http://106.12.200.32:8080/prison/box/getConfig_getConfig.action?mac=testcode-------****************************
+
+返回List<ClientConfig>
+
+----------------------------------------------------------------------
+
+获取开关机时间
+
+mac 
+http://106.12.200.32:8080/prison/box/getConfig_getControl.action?mac=testcode-------****************************
+
+返回List<ClientOcControl>
+oparate   1开机,2关机
+
+
+----------------------------------------------------------------------
+获取终端密码
+mac  终端id   必填
+
+http://106.12.200.32:8080/prison/box/getMessageAction_getPass.action?mac=testcode-------****************************
+
+----------------------------------------------------------------------
+
+检测升级
+mac  终端id   必填
+version   当前版本号    必填
+http://106.12.200.32:8080/prison/box/updateJobAction_checkUpdate.action?mac=testcode&version=1.0-------****************************
+
+----------------------------------------------------------------------
+获取问卷调查题目
+mac   (必填)
+
+http://106.12.200.32:8080/prison/box/getIntroAction_getQuestion.action?mac=testcode
+
+
+List<String> list
+----------------------------------------------------------------------
+提交问卷调查答案
+mac   (必填)
+answer
+
+http://106.12.200.32:8080/prison/box/getIntroAction_addexamSatisfy.action?mac=testcode&answer=2,1,1
+----------------------------------------------------------------------
+
+*****************获取走进附院消息
+
+mac   (必填)
+http://106.12.200.32:8080/prison/box/getFuyuan_getfuyuan.action?contentType=医院简介&mac=testcode
+
+----------------------------------------------------------------------
+获取主模块信息 1 公示板块  2 电视直播 3影音娱乐 4自助购物  5生活指南  6消息公告
+mac   (必填)   
+http://106.12.200.32:8080/prison/box/userLoginAction_getModels.action?mac=testcode
+
+返回   List<HotelS> hotelSs
+----------------------------------------------------------------------
+获取终端logo
+mac   (必填)
+http://106.12.200.32:8080/prison/box/userLoginAction_getLogo.action?mac=testcode-------****************************
+----------------------------------------------------------------------
+商品下单
+参数    
+    mac       MAC设备号
+    num       下单数据 格式：（菜单id:数量;菜单id:数量;菜单id:数量）结尾不需要;结束
+    PersonnelNumber     人员编号
+http://106.12.200.32:8080/prison/box/dishOrder_orderDish.action?mac=testcode&num=112:2;118:5&PersonnelNumber=123
+----------------------------------------------------------------------
+获取公示板块
+参数    
+    mac       MAC设备号
+http://106.12.200.32:8080/prison/box/getFuyuan_getIntroduce.action?mac=testcode
+----------------------------------------------------------------------
+新增申述预约
+参数    mac     MAC设备号
+    PersonnelNumber   人员编码
+    orderTime   预约时间
+    
+http://106.12.200.32:8080/prison/box/notification_toAdd.action?mac=testcode&orderTime=2016-09-21 16:00:00&PersonnelNumber=123456
+----------------------------------------------------------------------
+查看全部预约消息动态
+参数    mac     MAC设备号
+    id      预约id
+http://106.12.200.32:8080/prison/box/notification_getOrder.action?mac=testcode
+
+返回   readStatus 0 未读  1 已读
+----------------------------------------------------------------------
+修改消息状态为已读
+参数    mac     MAC设备号
+    model.id      预约id
+http://106.12.200.32:8080/prison/box/notification_changeNotifcation.action?mac=testcode&model.id=776
+
+返回   readStatus 0 未读  1 已读
+----------------------------------------------------------------------
+获取设备信息
+参数    
+    mac       MAC设备号
+
+http://106.12.200.32:8080/prison/box/userLoginAction_getMacMessage.action?mac=testcode
+----------------------------------------------------------------------
+新增播放次数
+
+参数    
+    mac         MAC设备号
+    programId   播放的影片id（二级）
+http://106.12.200.32:8080/prison/box/userLoginAction_addVisitCount.action?mac=testcode&programId=68
+
+----------------------------------------------------------------------
+获取提押通知
+
+参数    
+    mac         MAC设备号
+    
+http://106.12.200.32:8080/prison/box/getMessageAction_getInform.action?mac=testcode
+----------------------------------------------------------------------
+修改ip通知服务器
+http://106.12.200.32:8080/prison/box/userLoginAction_changeIp.action?mac=testcode-------****************************
+
+----------------------------------------------------------------------
+上传截图日志
+screenshot   文件  
+http://106.12.200.32:8080/prison/box/userLoginAction_uploadPic.action?mac=testcode-------****************************
+
+----------------------------------------------------------------------
+获取服务器时间
+mac   mac
+http://106.12.200.32:8080/prison/box/userLoginAction_getTime.action?mac=testcode-------****************************
+
+----------------------------------------------------------------------
+
+获取计划播放信息
+mac   (必填)
+http://192.168.2.170:8081/prison/box/getMIPAction_get.action?mac=testcode
+返回：MsgInsertPlay
+-------------------------------------------------------------------------------------------
+获取服务器文件资源
+参数：
+mac   (必填)
+pageSize 每页数据量（默认10）    pageNo  页数   （默认1）
+file.dir:  目录id   （int） 可选
+file.fileType: 文件类型  (int) 可选
+sub：是否获取子目录下的文件 (bool  默认为 false）
+http://106.12.200.32:8080/prison/box/getFileAction_getSourceFile.action
+返回：PageObj  data(List<SourceFile>)
+-------------------------------------------------------------------------------------------
+获取服务器文件资源目录
+参数：
+ 参数名为file.dir 默认返回最顶层目录
+http://106.12.200.32:8080/prison/box/getFileAction_getDir.action?mac=testcode&file.dir=14
+-------------------------------------------------------------------------------------------
+获取所有文件类型信息
+参数：
+mac   (必填)
+http://106.12.200.32:8080/prison/box/getFileAction_getType.action
+返回：List<FileType>
+-------------------------------------------------------------------------------------------
+获取录播资源
+参数：
+mac   (必填)
+keyWord: 搜索关键字   是否可选：可选
+timeStatus: 时间点 （类型：int 本周：0 上周：1 本月：2 上月 3 今年 ：4 去年：5）  是否可选：可选
+pageSize 每页数据量（默认10）    pageNo  页数   （默认1）  是否可选：可选
+http://106.12.200.32:8080/prison/box/getFileAction_getTrFile.action?pageSize=8&pageNo=1&model.id=1&mac=testcode
+返回：List<Transcribe>
+-------------------------------------------------------------------------------------------
+插播（socket）
+9999端口     数据  json格式
+	 int id;           // 资源id
+	 int command;      //1 播放  2 快进  3 快退   4 取消  5 暂停 /播放(播放状态暂停/其他状态播放) 6 停止
+	 String path;
+	 int type;         //1 直播  2 点播
+	 source_type       1.资源库  2.本地  3.直播 4.录播资源
+----------------------------------------------------------------------
+
+

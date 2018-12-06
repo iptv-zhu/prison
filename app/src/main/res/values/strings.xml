@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">智慧站牌</string>
+    <string name="app_name">IPTV</string>
+    <string name="time">时间</string>
+    <string name="date">日期</string>
+
+    <string name="tips">温馨提示</string>
+    <string name="Download">应用下载</string>
+    <string name="Downloading_update">正在下载升级包。请稍后...</string>
+    <string name="update_title">升级提示</string>
+    <string name="update_content">检测到版本需要升级！是否下载安装？</string>
+    <string name="Downloading_game">正在下载应用。请稍后...</string>
+    <string name="Downloading_live">正在下载直播应用。请稍后...</string>
+    <string name="Downloading_vod">正在下载视频应用。请稍后...</string>
+    <string name="Downloading_music">正在下载音乐应用。请稍后...</string>
+    <string name="Background">后台下载</string>
+    <string name="Complete">下载成功</string>
+    <string name="DownFailed">下载失败</string>
+    <string name="Ok">确\t定</string>
+    <string name="Cancle">取\t消</string>
+
+    <string name="bottom_control">键控制</string>
+    <string name="bottom_choose">键选择</string>
+    <string name="bottom_ok">键确定</string>
+    <string name="bottom_back">键返回</string>
+
+    <string name="live_name">频道</string>
+    <string name="live_count">(共X个)</string>
+    <string name="video_time">上一次观看到x,是否继续播放?</string>
 </resources>

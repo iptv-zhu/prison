@@ -16,7 +16,7 @@ public class VolleyRequestUtil {
 
     public static StringRequest stringRequest;
     public static Context context;
-    public static int sTimeOut = 30000;
+    public static int sTimeOut = 3000;
 
     /*
     * 获取GET请求内容
@@ -31,9 +31,10 @@ public class VolleyRequestUtil {
                                   VolleyListenerInterface volleyListenerInterface,
                                   boolean timeOutDefaultFlg) {
         // 清除请求队列中的tag标记请求
-        MyApp.getQueue().cancelAll(tag);
+//        MyApp.getQueue().cancelAll(tag);
         // 创建当前的请求，获取字符串内容
-        stringRequest = new StringRequest(Request.Method.GET, ConstUtils.BASEURL + url,
+//        stringRequest = new StringRequest(Request.Method.GET, ConstUtils.BASEURL + url,
+        stringRequest = new StringRequest(Request.Method.GET,  url,
                 volleyListenerInterface.responseListener(), volleyListenerInterface.errorListener());
         // 为当前请求添加标记
         stringRequest.setTag(tag);
@@ -44,7 +45,7 @@ public class VolleyRequestUtil {
         // 将当前请求添加到请求队列中
         MyApp.getQueue().add(stringRequest);
         // 重启当前请求队列
-        MyApp.getQueue().start();
+//        MyApp.getQueue().start();
     }
 
     /*

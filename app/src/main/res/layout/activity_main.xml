@@ -1,9 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activity.MainActivity">
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <ypsiptv.prison.view.widget.Top
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ypsiptv.prison.view.widget.Top>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_580"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/dp_100"
+        android:background="@color/white">
+
+        <ypsiptv.prison.view.widget.center.TvRecyclerView
+            android:id="@+id/tv_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_580"
+            app:focusDrawable="@color/white" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

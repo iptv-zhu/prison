@@ -44,7 +44,7 @@ public class LogUtils {
 
     public static void d(String msg) {
         if (isDebug) {
-            Log.d(APP_TAG + "@" + Util.formatTime(), getMsgFormat(msg));
+            Log.d(APP_TAG + "@" + Utils.formatTime(), getMsgFormat(msg));
         }
     }
 
@@ -97,7 +97,7 @@ public class LogUtils {
      * 输出格式定义
      */
     private static String getMsgFormat(String msg) {
-        return msg + getFunctionName();
+        return msg ;
     }
 }
 

@@ -3,6 +3,7 @@ package ypsiptv.prison.utils;
 import android.util.Log;
 
 
+import okhttp3.internal.Util;
 import ypsiptv.prison.app.MyApp;
 
 import java.io.BufferedOutputStream;
@@ -15,7 +16,7 @@ import java.io.OutputStreamWriter;
 
 public class DataGather {
 
-    private static String time = Util.creatTime(System.currentTimeMillis());
+    private static String time = Utils.creatTime(System.currentTimeMillis());
     private static String filesDir = MyApp.getInstance().getFilesDir().getAbsolutePath();
 
     public static void writeDG(String str) {
